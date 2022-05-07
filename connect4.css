@@ -1,0 +1,83 @@
+/* game board table */
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+  position: relative;
+}
+
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  position: absolute;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+
+/* The following codes calls the fall-down animation and sets the initial position depending on the row */
+div.firstRow {
+  top: -56px;
+  animation: fall-down 100ms linear 0s;
+  animation-fill-mode: forwards;
+}
+div.secondRow {
+  top: -112px;
+  animation: fall-down 200ms linear 0s;
+  animation-fill-mode: forwards;
+}
+div.thirdRow {
+  top: -168px;
+  animation: fall-down 300ms linear 0s;
+  animation-fill-mode: forwards;
+}
+div.fourthRow {
+  top: -224px;
+  animation: fall-down 400ms linear 0s;
+  animation-fill-mode: forwards;
+}
+div.fifthRow {
+  top:-280px;
+  animation: fall-down 500ms linear 0s;
+  animation-fill-mode: forwards;
+}
+div.sixthRow {
+  top:-336px;
+  animation: fall-down 600ms linear 0s;
+  animation-fill-mode: forwards;
+}
+
+
+/* fall-down animation from initial position to 0% within the board space div */
+@keyframes fall-down {
+  from {
+    
+  }
+  to {
+    top:0%;
+  }
+}
+
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: blue;
+}
+
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+  
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
